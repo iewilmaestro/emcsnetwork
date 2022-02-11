@@ -23,7 +23,7 @@ if($pil==1){goto faucet;
 }elseif($pil==2){unlink($a[1]."/Cookie");goto cookie;
 }else{echo col("Bad Number\n","m")."\n";line();goto menu;}
 faucet:
-while(true){auto();$api = api();$time = $api["seconds"];$msg = $api["message"];auto()if($time){tmr($time);}$energy=explode('<span>',explode('<p class="amount">',auto())[1])[0];if($msg=="no_autoclaims"){echo col('insufficient BITS Balance','m')."\n";goto menu;}api();Credit();echo col("Energy ~> ",'h').col($energy,'k')."\n";line();}
+while(true){auto();$api = api();$time = $api["seconds"];$msg = $api["message"];auto();if($time){tmr($time);}$energy=explode('<span>',explode('<p class="amount">',auto())[1])[0];if($msg=="no_autoclaims"){echo col('insufficient BITS Balance','m')."\n";goto menu;}api();Credit();echo col("Energy ~> ",'h').col($energy,'k')."\n";line();}
 function head(){$user=Save("User_Agent");$cookie=Save("Cookie");$ua=["user-agent: ".$user,"cookie: ".$cookie];return $ua;}
 function host(){return "https://emcsnetwork.com";}
 function auto(){$url = host().'/dashboard/claim/auto/start';return Run($url,head());}
