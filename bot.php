@@ -63,8 +63,10 @@ function b($i=0){
 	$t = e($s,'#'.a[1].':','|',1);
 	if($t == "on"){
 		$st = w("Online","h");
+		$msg = "";
 	}elseif($status == "off" or $status == null){
 		$st = w("Offline","m");
+		$msg = g();
 	}
 	$z = trim(strtolower(a[1]));
 	return p.' Day:'.date("l").'    Date:'.date("d M Y").'    Time:'.date("H:i").n.l().
@@ -75,9 +77,7 @@ p." ╚  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘   ╚  ┴ ┴┴
 '『』Creator: iewil'.n.'『』Youtube: youtube.com/c/iewil'.n.
 '『』support: All-Team-Function & All-Member'.n.
 '『』D_TRX  : TK67fkL9EpcoCqP2kxonwMmmwyQ5pJmm'.n.
-w('『』NOTE   : THIS SCRIPT FREE NOT FOR SALE','u').n.l().n;
-
-g();
+w('『』NOTE   : THIS SCRIPT FREE NOT FOR SALE','u').n.l().n.$msg;
 }
 function c(){
 	return system('clear');
